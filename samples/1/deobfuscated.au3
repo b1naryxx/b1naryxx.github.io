@@ -15,7 +15,7 @@ Func decrypt_data($vdata, $vcryptkey) ; ewyotozfgclifr
 	Local $iproviderid = "24"
 
 	;create a crypt context for RSA_AES cypher read more at https://support.microsoft.com/en-sg/help/238187/cryptacquirecontext-use-and-troubleshooting
-	Local $aret = DllCall("Advapi32.dll", "bool", , _ 
+	Local $aret = DllCall("Advapi32.dll", "bool", "CryptAcquireContext", _ 
 																"handle*", "0", _
 																"ptr", "0", _
 																"ptr", "0", _
